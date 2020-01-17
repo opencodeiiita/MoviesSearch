@@ -25,7 +25,7 @@ class App extends React.Component {
           <tbody>
             <tr>
               <td>
-                <img alt="app icon" src="" />
+                <img alt="app icon" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/movie-alt-64.png" />
               </td>
               <td width="8" />
               <td>
