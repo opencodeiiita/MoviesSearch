@@ -6,7 +6,6 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
-    this.searchChangeHandler = this.searchChangeHandler.bind(this);
   }
 
   performSearch(searchTerm) {
@@ -46,7 +45,7 @@ class App extends React.Component {
             paddingLeft: 16
           }}
           placeholder="Enter search term"
-          onChange={this.searchChangeHandler}
+          onChange={ () => this.searchChangeHandler() }
         />
       </div>
     );
