@@ -5,17 +5,21 @@ import $ from "jquery";
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+    };
+    this.searchChangeHandler = this.searchChangeHandler.bind(this);
   }
 
   performSearch(searchTerm) {
     const urlString =
       "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
       searchTerm;
+      console.log(`Retrieving data from ${urlString}`);
   }
 
   searchChangeHandler(event) {
     console.log('Search query changed');
+    this.performSearch(event.target.value)
   }
 
   render() {
