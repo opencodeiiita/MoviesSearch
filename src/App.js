@@ -13,9 +13,11 @@ class App extends React.Component {
       "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
       searchTerm;
   }
+  
 
   searchChangeHandler(event) {
     console.log('Search query changed');
+	this.performSearch(document.querySelector("#query").value);
   }
 
   render() {
@@ -35,7 +37,7 @@ class App extends React.Component {
           </tbody>
         </table>
 
-        <input
+        <input id="query"
           style={{
             fontSize: 24,
             display: "block",
@@ -45,6 +47,7 @@ class App extends React.Component {
             paddingLeft: 16
           }}
           placeholder="Enter search term"
+		  
           onChange={ () => this.searchChangeHandler() }
         />
       </div>
