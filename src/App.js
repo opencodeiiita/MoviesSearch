@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Footer from './Footer.js'
 import $ from "jquery";
 
 class App extends React.Component {
@@ -13,7 +14,6 @@ class App extends React.Component {
       "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
       searchTerm;
   }
-  
 
   searchChangeHandler(event) {
     console.log('Search query changed');
@@ -41,18 +41,27 @@ class App extends React.Component {
           style={{
             fontSize: 24,
             display: "block",
-            width: "99%",
+            width: "98%",
             paddingTop: 8,
             paddingBottom: 8,
             paddingLeft: 16
           }}
           placeholder="Enter search term"
-		  
-          onChange={ () => this.searchChangeHandler() }
+          onChange={ this.searchChangeHandler.bind(this) }
         />
+        <Footer/>
       </div>
     );
   }
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
