@@ -46,7 +46,7 @@ class App extends React.Component {
             paddingLeft: 16
           }}
           placeholder="Enter search term"
-          onChange={ () => this.searchChangeHandler() }
+          onChange={ this.searchChangeHandler.bind(this) }
         />
         <Footer/>
       </div>
