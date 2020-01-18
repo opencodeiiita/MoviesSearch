@@ -6,6 +6,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {};
+    this.searchChangeHandler = this.searchChangeHandler.bind(this);
   }
 
   performSearch(searchTerm) {
