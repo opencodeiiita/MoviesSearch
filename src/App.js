@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Footer from './Footer.js'
 import $ from "jquery";
 
 class App extends React.Component {
@@ -39,7 +40,7 @@ class App extends React.Component {
           style={{
             fontSize: 24,
             display: "block",
-            width: "99%",
+            width: "98%",
             paddingTop: 8,
             paddingBottom: 8,
             paddingLeft: 16
@@ -47,6 +48,7 @@ class App extends React.Component {
           placeholder="Enter search term"
           onChange={ () => this.searchChangeHandler() }
         />
+        <Footer/>
       </div>
     );
   }

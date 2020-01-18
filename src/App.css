@@ -1,0 +1,11 @@
+.footer {
+    left: 0px;
+    bottom: 0px;
+    height: 50px;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    background: black;
+    color: white;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
