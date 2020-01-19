@@ -25,7 +25,8 @@ class MovieRow extends React.Component {
 					<tr>
 						<td>[DESCRIPTION]</td>
 					</tr>
-					</td>
+				</table>
+				</td>
 			</tr>
 			</table>
 		  )
