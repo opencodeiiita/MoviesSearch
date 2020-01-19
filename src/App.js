@@ -9,15 +9,15 @@ class App extends React.Component {
     this.state = {};
   }
 
-performSearch(searchTerm) {
+  performSearch(searchTerm) {
     const urlString =
         "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
-        searchTerm;
+        searchTerm + "&page=";
     $.ajax({
-        url: urlString,
+        url: urlString+"1",
         method: "GET"
     }).done(function(response) {
-        console.log(response);
+        console.log(response.results)
     }).fail(function() {
         console.log("error")
     });
