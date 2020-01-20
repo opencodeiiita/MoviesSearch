@@ -24,7 +24,7 @@ class App extends React.Component {
 }
 
   searchChangeHandler(event) {
-    console.log('Search query changed');
+    this.performSearch(event.target.value);
   }
 
   render() {
