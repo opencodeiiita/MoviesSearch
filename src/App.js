@@ -24,7 +24,7 @@ class App extends React.Component {
 }
 
   searchChangeHandler(event) {
-    console.log('Search query changed');
+    this.performSearch(event.target.value);
   }
 
   render() {
@@ -41,7 +41,7 @@ class App extends React.Component {
                 <h3>MoviesDB Search</h3>
               </td>
             </tr>
-          </tbody>
+          </tbody> 
         </table>
 
         <input

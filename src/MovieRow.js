@@ -33,4 +33,4 @@ class MovieRow extends React.Component {
   }
 }
 
-ReactDOM.render(<MovieRow />, document.getElementById("MovieRow"));
+export default MovieRow;
