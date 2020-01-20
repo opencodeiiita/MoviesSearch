@@ -41,7 +41,7 @@ class App extends React.Component {
                 <h3>MoviesDB Search</h3>
               </td>
             </tr>
-          </tbody>
+          </tbody> 
         </table>
 
         <input
