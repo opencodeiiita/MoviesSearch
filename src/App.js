@@ -8,7 +8,6 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-
   performSearch(searchTerm) {
     const urlString =
         "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
@@ -43,7 +42,6 @@ class App extends React.Component {
             </tr>
           </tbody> 
         </table>
-
         <input
           style={{
             fontSize: 24,
