@@ -8,7 +8,10 @@
     background: black;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
 }
+
 
 .loader {
     position: fixed;
@@ -19,4 +22,27 @@
     z-index: 9999;
     background: url('https://media.giphy.com/media/9D2iQLabobsME/giphy.gif ') 50% 50% no-repeat rgb(255, 254, 254);
     opacity: 2;
+}
+
+.social-icons {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.social-icons > li {
+    display: inline;
+    margin-left: -5px;
+}
+
+.social-svg {
+    width: 30px!important;
+    height: 30px!important;
+}
+
+.social-container {
+    top: -6px!important;
+}
+
+.social-icon {
+    overflow: visible!important;
 }
