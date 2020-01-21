@@ -8,4 +8,29 @@
     background: black;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social-icons {
+    list-style-type: none;
+    display: inline-block;
+}
+
+.social-icons > li {
+    display: inline;
+    margin-left: -5px;
+}
+
+.social-svg {
+    width: 30px!important;
+    height: 30px!important;
+}
+
+.social-container {
+    top: -6px!important;
+}
+
+.social-icon {
+    overflow: visible!important;
 }
