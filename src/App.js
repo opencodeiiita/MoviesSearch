@@ -37,7 +37,7 @@ class App extends React.Component {
               </td>
               <td width="8" />
               <td>
-                <h3>MoviesDB Search</h3>
+                <h3><font color="red">MoviesDB Search</font></h3>
               </td>
             </tr>
           </tbody> 
@@ -61,3 +61,4 @@ class App extends React.Component {
 }
 
 export default App;
+

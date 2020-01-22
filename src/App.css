@@ -12,6 +12,9 @@
     justify-content: space-evenly;
 }
 
+
+.App {
+	background-color: #000000;
 .social-icons {
     list-style-type: none;
     display: inline-block;
@@ -33,4 +36,5 @@
 
 .social-icon {
     overflow: visible!important;
+
 }
