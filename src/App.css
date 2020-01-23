@@ -14,7 +14,17 @@
 
 
 .App {
+
     background-color: #000000;
+}
+
+}
+.heading{
+        font-family: 'Audiowide';
+        font-size:25px;
+        ;
+        background-color:black;
+        color:#dbc2ba !important;
 }
 
 .social-icons {
