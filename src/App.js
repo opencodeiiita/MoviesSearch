@@ -28,16 +28,18 @@ class App extends React.Component {
 
   render() {
     return (
+
       <div className="App">
+
         <table className="titleBar ">
           <tbody>
             <tr>
               <td>
                 <img alt="app icon" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/movie-alt-64.png" />
               </td>
-              <td width="8" />
+             
               <td>
-                <h3><font color="red">MoviesDB Search</font></h3>
+                <h3 class="heading">MoviesDB Search</h3>
               </td>
             </tr>
           </tbody> 
