@@ -13,8 +13,10 @@
 }
 
 
-.App {
+.App 
+{
 	background-color: #000000;
+}
 .social-icons {
     list-style-type: none;
     display: inline-block;
