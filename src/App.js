@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Footer from './Footer.js'
 import $ from "jquery";
 
 class App extends React.Component {
@@ -7,49 +8,59 @@ class App extends React.Component {
     super(props);
     this.state = {};
   }
-
   performSearch(searchTerm) {
     const urlString =
-      "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
-      searchTerm;
-  }
+        "https://api.themoviedb.org/3/search/movie?&api_key=da17eed40cc1258d79d206c8a72880dc&language=en-US&page=1&include_adult=false&query=" +
+        searchTerm + "&page=";
+    $.ajax({
+        url: urlString+"1",
+        method: "GET"
+    }).done(function(response) {
+        console.log(response.results)
+    }).fail(function() {
+        console.log("error")
+    });
+}
 
   searchChangeHandler(event) {
-    console.log('Search query changed');
+    this.performSearch(event.target.value);
   }
 
   render() {
     return (
+
       <div className="App">
+
         <table className="titleBar ">
           <tbody>
             <tr>
               <td>
-                <img alt="app icon" src="" />
+                <img alt="app icon" src="https://cdn4.iconfinder.com/data/icons/small-n-flat/24/movie-alt-64.png" />
               </td>
-              <td width="8" />
+             
               <td>
-                <h3>MoviesDB Search</h3>
+                <h3 class="heading">MoviesDB Search</h3>
               </td>
             </tr>
-          </tbody>
+          </tbody> 
         </table>
-
         <input
           style={{
             fontSize: 24,
             display: "block",
-            width: "99%",
+            width: "98%",
             paddingTop: 8,
             paddingBottom: 8,
             paddingLeft: 16
           }}
           placeholder="Enter search term"
-          onChange={this.searchChangeHandler}
+          onChange={ this.searchChangeHandler.bind(this) }
         />
+        <Footer/>
       </div>
     );
   }
 }
 
 export default App;
+
