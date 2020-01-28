@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
-import Footer from './Footer.js'
+import Footer from './Footer.js';
+import MovieRow from './MovieRow.js'
 import $ from "jquery";
 
 class App extends React.Component {
@@ -16,8 +17,16 @@ class App extends React.Component {
         url: urlString+"1",
         method: "GET"
     }).done(function(response) {
-        console.log(response.results)
-    }).fail(function() {
+        var results = response.results;
+        var rows=[];
+        for(var i=0; i<results.length; i++) {
+          var movie = results[i];
+          var mRow = <MovieRow name={movie.title} description={movie.overview} poster={movie.poster_path} />;
+          rows.push(mRow);
+        }
+        this.setState({movies: rows});
+        console.log(this.state);
+    }.bind(this)).fail(function() {
         console.log("error")
     });
 }
@@ -39,7 +48,7 @@ class App extends React.Component {
               </td>
              
               <td>
-                <h3 class="heading">MoviesDB Search</h3>
+                <h3 className="heading">MoviesDB Search</h3>
               </td>
             </tr>
           </tbody> 
