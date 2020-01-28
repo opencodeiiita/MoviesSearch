@@ -17,11 +17,11 @@ class App extends React.Component {
         url: urlString+"1",
         method: "GET"
     }).done(function(response) {
-        var results = response.results;
-        var rows=[];
-        for(var i=0; i<results.length; i++) {
-          var movie = results[i];
-          var mRow = <MovieRow name={movie.title} description={movie.overview} poster={movie.poster_path} />;
+        const results = response.results;
+        const rows=[];
+        for(let i=0; i<results.length; i++) {
+          let movie = results[i];
+          let mRow = <MovieRow name={movie.title} description={movie.overview} poster={movie.poster_path} />;
           rows.push(mRow);
         }
         this.setState({movies: rows});
