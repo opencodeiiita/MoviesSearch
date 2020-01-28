@@ -1,0 +1,9 @@
+1. Error: Bad value %PUBLIC_URL%/favicon.png for attribute href on element link: Percentage ("%") is not followed by two hexadecimal digits.
+
+From line 5, column 5; to line 5, column 64
+<link rel="shortcut icon" href="%PUBLIC_URL%/favicon.png" 
+
+2. Error: Bad value %PUBLIC_URL%/manifest.json for attribute href on element link: Percentage ("%") is not followed by two hexadecimal digits.
+
+From line 13, column 5; to line 13, column 61
+<link rel="manifest" href="%PUBLIC_URL%/manifest.json"     
