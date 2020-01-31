@@ -4,6 +4,7 @@ import Footer from './Footer.js';
 import MovieRow from './MovieRow.js'
 import $ from "jquery";
 
+let rows = []
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -18,7 +19,7 @@ class App extends React.Component {
         method: "GET"
     }).done(function(response) {
         const results = response.results;
-        const rows=[];
+        rows=[];
         for(let i=0; i<results.length; i++) {
           let movie = results[i];
           let mRow = <MovieRow movie={movie}/>;
@@ -65,6 +66,7 @@ class App extends React.Component {
           placeholder="Enter search term"
           onChange={ this.searchChangeHandler.bind(this) }
         />
+        <MovieRow movies={rows}/>
         <Footer/>
       </div>
     );
