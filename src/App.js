@@ -21,7 +21,7 @@ class App extends React.Component {
         const rows=[];
         for(let i=0; i<results.length; i++) {
           let movie = results[i];
-          let mRow = <MovieRow name={movie.title} description={movie.overview} poster={movie.poster_path} />;
+          let mRow = <MovieRow movie={movie}/>;
           rows.push(mRow);
         }
         this.setState({movies: rows});
