@@ -29,7 +29,7 @@ class MovieRow extends React.Component {
           <tr>
           <td> <img src={movie.props.movie.poster_path} alt="images.jpg" height="200px" width="200px"></img>  </td> <center>
           <td>
-            <table><tbody>
+            <table width="1500"><tbody>
               <tr>
                 <th> Movie Name </th>
               </tr>
@@ -43,7 +43,14 @@ class MovieRow extends React.Component {
                 <td> <center> {movie.props.movie.overview} </center> </td>
               </tr> </tbody>
             </table>
-          </td> </center>
+          </td>  <td> <button style={{
+            color: "#167780",
+            backgroundColor: "black",
+            border : "2px solid",
+            fontSize : "1.2em",
+            padding:"10px",
+            margin:"10px"
+          }}> View </button ></td> </center>
         </tr>
         )}
         </tbody>
