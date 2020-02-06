@@ -16,37 +16,43 @@ class MovieRow extends React.Component {
       }
     }
     return (
-      <table style={{
+      <center>
+      <table  style={{
         color:"white",
-        tableLayout: "fixed"
+        tableLayout: "fixed",
+        margin: "2em",
+        borderCollapse: "collapse"
       }}>
         <tbody>
         <tr>
-          <th> Movie Poster </th>
-          <th> Details </th>
+          <th> <h1> Movie Poster </h1> </th>
+          <th> <h1> Details </h1></th>
         </tr> 
         {(this.props.movies).map((movie) => 
-          <tr>
-          <td> <img src={movie.props.movie.poster_path} alt="images.jpg" height="200px" width="200px"></img>  </td> <center>
+          <tr style={{border: "solid",
+            borderWidth: "2px 0"}}>
+          <td style = {{padding : "1em"}}> <img src={movie.props.movie.poster_path} alt="images.jpg" height="200px" width="200px"></img>  </td> <center>
           <td>
-            <table width="1500"><tbody>
+            <table style={{ width:"800px"}}><tbody>
               <tr>
-                <th> Movie Name </th>
+                <th style = {{color : "#167780"}}> Movie Name </th>
               </tr>
               <tr>
-                <td> <center> {movie.props.movie.title} </center> </td>
+                <td style = {{padding : "1em"}}> <center> {movie.props.movie.title} </center> </td>
               </tr>
               <tr>
-                <th> Movie Description </th>
+                <th style = {{color : "#167780"}}> Movie Description </th>
               </tr>
               <tr>
-                <td> <center> {movie.props.movie.overview} </center> </td>
+                <td style = {{padding : "1em"}}> <center> {movie.props.movie.overview} </center> </td>
               </tr> </tbody>
             </table>
           </td>  <td> <button style={{
+            align: "center",
             color: "#167780",
             backgroundColor: "black",
             border : "2px solid",
+            borderRadius : "4px",
             fontSize : "1.2em",
             padding:"10px",
             margin:"10px"
@@ -55,6 +61,7 @@ class MovieRow extends React.Component {
         )}
         </tbody>
       </table>
+      </center>
     );} else{
       return null;
     }
