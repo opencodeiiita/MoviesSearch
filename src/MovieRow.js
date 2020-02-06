@@ -15,6 +15,17 @@ class MovieRow extends React.Component {
         (this.props.movies)[i].props.movie.poster_path=path;
       }
     }
+    var openMoviePage = (event) => {
+      let id = event.target.dataset.id;
+      let title = event.target.dataset.title;
+      let fullUrl = "https://www.themoviedb.org/movie/" + id ;
+      let titleSplitted = title.split(' ');
+      for (let i=0; i<titleSplitted.length; i++){
+        fullUrl += "-" + titleSplitted[i];
+      }
+      fullUrl += "?language=en-US";
+      window.open(fullUrl,'_blank');
+    }
     return (
       <center>
       <table  style={{
@@ -47,7 +58,7 @@ class MovieRow extends React.Component {
                 <td style = {{padding : "1em"}}> <center> {movie.props.movie.overview} </center> </td>
               </tr> </tbody>
             </table>
-          </td>  <td> <button style={{
+          </td>  <td> <button data-id = {movie.props.movie.id} data-title ={movie.props.movie.title} onClick={openMoviePage} style={{
             align: "center",
             color: "#167780",
             backgroundColor: "black",
